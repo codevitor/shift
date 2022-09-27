@@ -99,7 +99,9 @@ app.post("/create-short", (req, res) => __awaiter(void 0, void 0, void 0, functi
         return res.json(error);
     }
 }));
+Redshift.login(process.env.TOKEN);
+
 app.listen(80, () => __awaiter(void 0, void 0, void 0, function* () {
     console.log("Server listening");
-    Redshift.login(process.env.TOKEN);
+    
 }));
