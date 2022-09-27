@@ -1,9 +1,13 @@
 import "dotenv/config";
 import { Client, IntentsBitField, Partials, VoiceChannel } from "discord.js";
 import express from "express";
-import { prisma } from "database/client";
+import { PrismaClient } from "@prisma/client";
 import { short } from "prisma"
 const app = express();
+
+
+const prisma = new PrismaClient({
+});
 
 app.use(express.json())
 
